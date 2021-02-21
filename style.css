@@ -1,0 +1,293 @@
+body, html
+{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+#main
+{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+#main
+{
+    background-image: url('images/fond.jpg');
+    background-repeat: repeat;
+    box-sizing: border-box;
+}
+
+.mm
+{
+    position: absolute;
+    left: 50%;
+    top: 60%;
+    width: 480px;
+    height: 432px;
+    margin-left: -240px;
+    margin-top: -216px;
+    background-image: url('images/fond-mm.png');
+    background-repeat: no-repeat;
+    background-position: bottom right;
+}
+
+.tl
+{
+    position: absolute;
+    right: 100%;
+    bottom: 100%;
+    width: 620px;
+    height: 367px;
+    background-image: url('images/fond-tl.png');
+    background-repeat: no-repeat;
+    background-position: bottom right;
+}
+
+.ml
+{
+    position: absolute;
+    right: 100%;
+    top: 0;
+    bottom: 0;
+    width: 620px;
+    height: 432px;
+    background-image: url('images/fond-ml.png');
+    background-repeat: no-repeat;
+    background-position: bottom right;
+}
+
+#led-off
+{
+    position: absolute;
+    right: 65px;
+    top: 121px;
+    width: 44px;
+    height: 49px;
+}
+
+.bl
+{
+    position: absolute;
+    right: 100%;
+    top: 100%;
+    width: 620px;
+    height: 336px;
+    background-image: url('images/fond-bl.png');
+    background-repeat: no-repeat;
+    background-position: bottom right;
+}
+
+.tm
+{
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 100%;
+    width: 480px;
+    height: 336px;
+    background-image: url('images/fond-tm.png');
+    background-repeat: no-repeat;
+    background-position: bottom right;
+}
+
+.bm
+{
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 100%;
+    width: 480px;
+    height: 336px;
+    background-image: url('images/fond-bm.png');
+    background-repeat: no-repeat;
+    background-position: bottom right;
+}
+
+.tr
+{
+    position: absolute;
+    left: 100%;
+    bottom: 100%;
+    width: 614px;
+    height: 367px;
+    background-image: url('images/fond-tr.png');
+    background-repeat: no-repeat;
+    background-position: bottom right;
+}
+
+.mr
+{
+    position: absolute;
+    left: 100%;
+    top: 0;
+    bottom: 0;
+    width: 614px;
+    height: 432px;
+    background-image: url('images/fond-mr.png');
+    background-repeat: no-repeat;
+    background-position: bottom right;
+}
+
+.br
+{
+    position: absolute;
+    left: 100%;
+    top: 100%;
+    width: 614px;
+    height: 336px;
+    background-image: url('images/fond-br.png');
+    background-repeat: no-repeat;
+    background-position: bottom right;
+}
+
+
+
+#loading
+{
+    position: relative;
+    background-color: #d2ffae;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    z-index: 100;
+}
+
+.loading-center
+{
+    position: absolute;
+    width: 266px;
+    height: 324px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -60%);
+    overflow: visible;
+    z-index: 120;
+}
+
+.load-scale
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.loading-anim
+{
+    position: absolute;
+    overflow: visible;
+    top: 0;
+    left: 0;
+    width: 266px;
+    height: 304px;
+    top: 10px;
+    background-image: url('images/load-2.png');
+    animation: load-bump 3s ease infinite;
+    z-index: 120;
+}
+
+.loading-bar
+{
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    background-image: url('images/load.png');
+    background-repeat: no-repeat;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.loading-bar .progress
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: rgb(20, 32, 24);
+    z-index: 120;
+}
+
+.center
+{
+    position: absolute;
+    left: 50%;
+    top: 42%;
+    transform: translate(-50%);
+}
+
+.lds-dual-ring {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+}
+
+.lds-dual-ring:after {
+    content: " ";
+    display: block;
+    width: 32px;
+    height: 32px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 6px solid rgb(21, 46, 29);
+    border-color: rgb(21, 46, 29) transparent rgb(21, 46, 29) transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
+    margin: auto;
+}
+
+.scale-out {
+    animation: scale-out 0.5s ease 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes lds-dual-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes load-bump {
+    0% {
+        transform: translateY(10px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(10px);
+    }
+}
+
+@keyframes scale-out {
+    0% {
+        transform: scale(100%);
+        opacity: 1;
+    }
+
+    70% {
+        transform: scale(102%);
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: scale(0%);
+        opacity: 0;
+    }
+}
